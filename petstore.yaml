@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 info:
-  version: application/json; version=1
-  title: Swagger Petstore
+  version: 'application/json; version=1'
+  title: Swagger Petstore 2
   license:
     name: MIT
 servers:
