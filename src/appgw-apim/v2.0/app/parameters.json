@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "aseName": {
+      "value": "my114200589"
+    },
+    "useExistingVnetandSubnet": {
+      "value": true
+    },
+    "vNetResourceGroupName": {
+      "value": "rg-appgw-apim_dev_test_4"
+    },
+    "virtualNetworkName": {
+      "value": "appgw-apim-vnet"
+    },
+    "subnetName": {
+      "value": "ase"
+    },
+    "subnetAddressPrefix": {
+      "value": "10.0.2.0/24"
+    }
+  }
+}

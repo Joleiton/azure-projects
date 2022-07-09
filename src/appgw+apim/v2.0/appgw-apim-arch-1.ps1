@@ -82,14 +82,21 @@ $subscriptionId = $_subscriptionId
 
 Get-AzSubscription -Subscriptionid $subscriptionId | Select-AzSubscription
 
+$_deployment_name = Split-Path -Path (Split-Path -Path (Get-Location)) -Leaf  #Get deployment folder 
+
+$version = Split-Path -Path (Get-Location) -Leaf
+
+
+#$resourceGroupName =  $_deployment_name + #"-" + $datetime
+
+$resourceGroupName =  $_deployment_name + "-" + $version
 
 #Step3 - Create Resource Group in target subscription id
 
-$resourceGroupName =  $_rgname
 
 $location = $_location
 
-New-AzResourceGroup -Name $resourceGroupName -Location $location
+New-AzResourceGroup -Name $resourceGroupName -Location $location -Tag @{Target="Lab"}
 
 
 #Azure Resource Manager requires that all resource groups specify a location. 
@@ -137,7 +144,7 @@ $nsg_apim = New-AzNetworkSecurityGroup -ResourceGroupName $_rgname -Location $_l
 #NSG rules for APIM Subnet 
 
 $inrule1 = New-AzNetworkSecurityRuleConfig -Name 'Any' -Description "Any communication" -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80,443
-$inrule2 = New-AzNetworkSecurityRuleConfig -Name 'Allow_GWM' -Description "Allow Gateway Manager" -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix GatewayManager -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 65200,65535
+$inrule2 = New-AzNetworkSecurityRuleConfig -Name 'Allow_GWM' -Description "Allow Gateway Manager" -Access Allow -Protocol Tcp -Direction Inbound -Priority 110 -SourceAddressPrefix GatewayManager -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 65200,65535
 
 ##
 

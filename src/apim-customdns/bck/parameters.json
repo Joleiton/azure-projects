@@ -1,0 +1,203 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentName_": {
+      "value": "prod"
+    },
+    "apim1PublisherEmail": {
+      "value": "joleiton@microsoft.com"
+    },
+    "apim1publisherName": {
+      "value": "Jorge Leiton"
+    },
+    "api1msku": {
+      "value": "Developer"
+    },
+    "apim1skuCount": {
+      "value": 1
+    },
+    "apim2PublisherEmail": {
+      "value": "joleiton@microsoft.com"
+    },
+    "apim2publisherName": {
+      "value": "Jorge Leiton"
+    },
+    "api2msku": {
+      "value": "Premium"
+    },
+    "apim2skuCount": {
+      "value": 2
+    },
+    "apim2availabilityZones": {
+      "value": [
+        "1",
+        "2"
+      ]
+    },
+    "publicIpSku_apim2" :{
+      "value": "Standard"
+    },
+    "publicIPAllocationMethod_apim2" :{
+      "value": "Static"
+    },
+    "proxyCustomHostname1": {
+      "value": "proxy.apissec.com"
+    },
+    "proxyCustomHostnameBase64EncodedPfxCertificate1": {
+      "value": "MIIECgIBAzCCA9AGCSqGSIb3DQEHAaCCA8EEggO9MIIDuTCCAq8GCSqGSIb3DQEHBqCCAqAwggKcAgEAMIIClQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQI7e40Gv+S55ECAggAgIICaOVxCl01LWdi3RoXtBe1sO3XhPtgN5QPcZ0UGilxjwcgl4kHJg1F0ROtmFWrpCzJukeURS99JszDjwuM5tG/sIAsvfD5cc5i/bQ67dP+qcwqL5jl+hz0bpVz2CIywApmcK48binBzRrkDFPBFNEFFn06rpz3RTJWRsYvDcC6k/50NRQT+9RtsS8pqXTlCDGsT0uMgHQrt1FiygMOmyGzX7VMG/BYvZvKkW2/t1Ts/3quJvw04/l+LNYGHY/8nFyQP+bbLtXKzgDKXGwjEqEFImUb39rngbgPflNuQW1T/+W1sf9FZiSo0r++6BjIdV56PT8uOO6aTGBguyXni8LxXy4Jjr1D37wHYTuMSCQIri6TJlhuE83dQfYCxEzMvtFTJsEeMmzzmoNGd7cab5C26UgdLjAqE9wnzNQe9sCEH7xykTdn+3YCr1Rtwk3ayuqCVrvSRi3FzGU59fa+KEhkkpJHJaAqIM7s+v738HoSlzB0ACUaqXrccQBHAFAAylCKaDw4UcDLXlPLW1mr6uNlVgSFJ+LcnQg1GQkinAYtkHMgOwteac59YAKRmOnpTIyUwJ00vkQwcUKlawCNQXStBGNGX8klU02ZgHgN9ixrcbnyugNEO2cKEIf5VbF90ImNSgMitARW8ouzedphZWtOFEHRT9oMR8Vme7Kiap1nAqFHHuCCTCMqzHhYWLefl44YE11DzZAAniXTz7g8YanhC0Cronxx5EGqshxOY73UNBbGEWgC0dFAzqExV/PPoOxu+wzwdmq/OANvGVY9D8AsEePPTETWES4482AaU6wQMGjD8pD1kwcLGC4wggECBgkqhkiG9w0BBwGggfQEgfEwge4wgesGCyqGSIb3DQEMCgECoIG0MIGxMBwGCiqGSIb3DQEMAQMwDgQI2SOD8PkkrMYCAggABIGQTAlK0N6EHSOti2VW327QdCgK3IM4JY01lLCib2X/4yb6Q3VJyjOpkbpjBmbHDnklPDr09GI5hJesM6NhiT1jS6F+G6BidiPVgiqWf+KvpryMTzgQgpAj0YKzis3TF3ia4yVubvG83Zh+wmV79twyFJOA2ptPIQxqSeEoWLm3q8khtIOly8aS4u3Ac/L+wwCpMSUwIwYJKoZIhvcNAQkVMRYEFLrjXDY9R9dgDgGE+G6+fKcCwWKnMDEwITAJBgUrDgMCGgUABBSZrmsviDx2+P0CrgQL3Vl8nuROxAQIpnmX4YKR9OkCAggA"
+    },
+    "proxySSLCertificatePassword1": {
+      "value": "123456"
+    },
+    "managementCustomHostname": {
+      "value": "management.apissec.com"
+    },
+    "managementCustomHostnameBase64EncodedPfxCertificate": {
+      "value": "MIIEEgIBAzCCA9gGCSqGSIb3DQEHAaCCA8kEggPFMIIDwTCCArcGCSqGSIb3DQEHBqCCAqgwggKkAgEAMIICnQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQI0gVNO794U2MCAggAgIICcFaRZnKHnOYfMlqEAISPhTMo3dJf3yr6IV+XYmcjr8JMfMobpows26wiK3kaZWrdQqxwf9MkciHpypxIyMMSXBzqUfdVHT5PfnH8UXMmgakMUf5kLmBcBWe3IrQOuL9yLkisEgommkXIk/22xE+T3B56gWsmKRdIK6uuZJDMYOfQ/ypfq+4TOfAeP2ec30z5gWPwHrebBg4ygdW7HJb1pSjVCXnevGDyph5OgAT6YHTbUFeG494/kXzNwxo0X1pQicsTVuPgLI5Ml2KHv4M+AQ9EE70/BZEmniLo52gcjIQXtjjM5D0hDSdVFFJU2nfjctS5OyFgmeBRAXZbIxkC7bb5Mv5Ffejpkah3xXY3wVRhEkfZmgNYAQ/YWn1dz68qXKk6c+tsPTfII5TuLxgVl3r/m2WTv3cwBpnKE3QpuU8Fezf7yVuSkF3KBRYPZG4RbMUWuAAS97k6zqsPvWSq36JZ1qUdTF/QLU1pkIiDLSjox3o1u1C+ZVdS1JLekaIvwOf6XyiSa+CDa2CgEQVbJH+X3ppsmYf/rvpat5RlO1KhU1Xh8lnFOMXfEXOD2eh6pz2MFDTlWCaqOnOrDzILDr6ct1U3XSkJyt7q625j/gQz9idclPo5710CFL4vgWkjYPJamLQ4RyDmhCtst1uwE81PV6lZQo9UoeN0wDewdsGSBWsagtb+WCvlWMsaMhZ8RA1l1/Kg3bcYD2GS6vIGkIBr4uFtUXDxLi5NC/wqgNZOcdGYJFoH3NSalIpiyQbKra5dxvHbzBiovmrr2eotobP9MFaJT/7Ubrgjg/NmjIybwJ1D4ZpUZy3dU4l1KV7WPDCCAQIGCSqGSIb3DQEHAaCB9ASB8TCB7jCB6wYLKoZIhvcNAQwKAQKggbQwgbEwHAYKKoZIhvcNAQwBAzAOBAi3lGneCOjwAQICCAAEgZAn9EKGpzNrHitlluJ2Pbu2gp79LlWdC9ZvG1sl1CqEBzmlZkz8d28ZNbQ3fFoOUVS/z8lxptGNOtd3Chizd3O7TLSJjeztVhQku+BtTXjaewPMzJgo2opZUjXXR/yiMr2ELNhOLZuSFERwuSOXTF4BnTo2lm+hvAI+rJawwRrnEXcQsvaMZYVP10cBUzqchQYxJTAjBgkqhkiG9w0BCRUxFgQU3q+ue0LW5xyuqkXBXo4zsbBDLYUwMTAhMAkGBSsOAwIaBQAEFOU1lw4RUeJM2uL2T1u1f2h1O7n7BAjLoCYf0IENsgICCAA="
+    },
+    "managementSSLCertificatePassword": {
+      "value": "123456"
+    },
+    "portalCustomHostname": {
+      "value": "portal.apissec.com"
+    },
+    "portalCustomHostnameBase64EncodedPfxCertificate": {
+      "value": "MIIECgIBAzCCA9AGCSqGSIb3DQEHAaCCA8EEggO9MIIDuTCCAq8GCSqGSIb3DQEHBqCCAqAwggKcAgEAMIIClQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIrx1IS8kRw4cCAggAgIICaEDcHbFlEdH5gFv0tfbAMj3M/AsPPXA4BInYG4CljDx40OHD2GnBTtxNl7sgWBfp2yaHYo+uBTYA7xhRy/IrhKL7TF1Grya4CtpN7pud3xnumkjQ+z2XzBb7vz+SovuV1a7g1tRcfAV8ZPFrX0obAWrPzTRX+CLy2DLw2PjeLwnQ7dUbfU185cO3NTYKwY77Lo/ecAhZnge96Rm74MdGROIs4srB6GPgrLm792D5QHQFSrLauPyv1N3xfMSB2iNz+GM6OMJzJkFqXz2bYp5lb+DPi1UQnNZGKHZuLL21dIYZMSoC3dtvT5DfXvX37wPFOcdiDohvfI+/+q2eXvww3f4fQ3a/Tm4j5ZVNn3vaW23Im6fiWOfeqIjTadcF6hX2/8XzcX/dUcN6NENm0CKC1e8CiVZX1p3zFcVtaQUzIzvRmLsRaZgAv1067Y7H3ITykKd8TyrenFiD80iAIsfZENwYM5RuUnwL8UFZrPmOX3atDnCtRGLw8+9UDa3CY5I+jjZm3jhfMMp8V4hkszAbokKlfmMv9+kdmBPJgklpTxUZ0xZB524smlroco41UmlxZq4bR4KrMpQcoBgPUBN5hD+7ig5EkSgnFThWt5tJMJTXhjJLfa3ywdy32Ic2N+xif3mg3O4tSHpQKyFgu2fklTmMxkcUKdgBpoK4i+FqaSTiKX9KiGx1s5mNVvm7Be0U2esYZf8+/YgE+mTDXGWjeExyhwZ0BbT9FC8i2OFvhb1MnxIEJmva09h/PJQ69K2SLtxeco99nVn7iJZPWtqy5Z2tg1lz/0iJwtiox+XGx0UvatWPA1aMEjcwggECBgkqhkiG9w0BBwGggfQEgfEwge4wgesGCyqGSIb3DQEMCgECoIG0MIGxMBwGCiqGSIb3DQEMAQMwDgQIz3/DsPmpaTwCAggABIGQkQgPgttFpKt1pNzOcHotQfnqFaqxfTyNUPkQP3KFI43vz49ly4UKErf5PzPh5kT2Z+Sp6MTGJ9cmZmgQAGECxlX/PiB246YsxqDAecSV9udufiQhd+L0f+tQ7wkW5LmKb7GiWOJI54hmkDuOF6uMH6uClCu5+yiSbPt4CHfvucRC8WXWG4jxXemyvNBC+/EWMSUwIwYJKoZIhvcNAQkVMRYEFE2e7QxpqRP9ZwxqBZFlX5E7TLnUMDEwITAJBgUrDgMCGgUABBQlnuat6/FjcjIvVTlYug5igL1yGwQIFpknuhJaEPMCAggA"
+    },
+    "portalSSLCertificatePassword": {
+      "value": "123456"
+    },
+    "subnet0ServiceEndpoints": {
+      "value": [
+        {
+          "service": "Microsoft.Storage"
+        },
+        {
+          "service": "Microsoft.Sql"
+        },
+        {
+          "service": "Microsoft.EventHub"
+        }
+      ]
+    },
+    "subnet1ServiceEndpoints": {
+      "value": [
+        {
+          "service": "Microsoft.Storage"
+        },
+        {
+          "service": "Microsoft.Sql"
+        },
+        {
+          "service": "Microsoft.EventHub"
+        }
+      ]
+    },
+    "subnet2ServiceEndpoints": {
+      "value": [
+        {
+          "service": "Microsoft.Storage"
+        },
+        {
+          "service": "Microsoft.Sql"
+        },
+        {
+          "service": "Microsoft.EventHub"
+        }
+      ]
+    },
+    "subnet3ServiceEndpoints": {
+      "value": [
+        {
+          "service": "Microsoft.Storage"
+        },
+        {
+          "service": "Microsoft.Sql"
+        },
+        {
+          "service": "Microsoft.EventHub"
+        }
+      ]
+    },
+    "subnet4ServiceEndpoints": {
+      "value": [
+        {
+          "service": "Microsoft.Storage"
+        },
+        {
+          "service": "Microsoft.Sql"
+        },
+        {
+          "service": "Microsoft.EventHub"
+        }
+      ]
+    },
+    "location": {
+      "value": "East US"
+    },
+    "virtualNetworkAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnet0Prefix": {
+      "value": "10.0.0.0/24"
+    },
+    "subnet1Prefix": {
+      "value": "10.0.1.0/24"
+    },
+    "subnet2Prefix": {
+      "value": "10.0.2.0/24"
+    },
+    "subnet3Prefix": {
+      "value": "10.0.3.0/24"
+    },
+    "subnet4Prefix": {
+      "value": "10.0.4.0/24"
+    },
+    "managedDisk_storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "publicIpSku_VM": {
+      "value": "Basic"
+    },
+    "clientCIDR": {
+      "value": "167.220.24.44"
+    },
+    "vm1Name": {
+      "value": "jumpbox"
+    },
+    "vm1AdminUsername": {
+      "value": "darthvader"
+    },
+    "vm1AdminPassword": {
+      "value": "005M33tcafe.."
+    },
+    "vm1OSVersion": {
+      "value": "2019-Datacenter"
+    },
+    "vm2Name": {
+      "value": "customDns"
+    },
+    "vm2AdminUsername": {
+      "value": "darthvader"
+    },
+    "vm2AdminPassword": {
+      "value": "005M33tcafe.."
+    },
+    "vm2OSVersion": {
+      "value": "2019-Datacenter"
+    },
+    "vm3Name": {
+      "value": "backend"
+    },
+    "vm3AdminUsername": {
+      "value": "darthvader"
+    },
+    "vm3AdminPassword": {
+      "value": "005M33tcafe.."
+    },
+    "vm3OSVersion": {
+      "value": "2019-Datacenter"
+    }
+  }
+}
